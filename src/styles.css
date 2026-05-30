@@ -2987,6 +2987,9 @@ section {
   .cs-img-wrap--mobile { width: 100%; height: 40vw; }
   .cs-sc-corner-tr, .cs-sc-brace, .cs-sc-vline-r, .cs-sc-vline-l { display: none; }
 
+  /* ── Hero Badge: auf Mobile ausblenden ── */
+  .hero-badge { display: none; }
+
   /* ── Section: natürliche Höhe, kein Clip ── */
   .spotlight {
     height: auto;
@@ -2994,7 +2997,11 @@ section {
     overflow: visible;
     padding: 0;
     padding-top: 3rem; /* Abstand zur Filterleiste */
-    background: #0e0e0e;
+    background-color: #0e0e0e;
+    /* Raster-Design sinngemäß wie Desktop-Version */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cline x1='0' y1='0' x2='0' y2='120' stroke='%23ffffff' stroke-width='1' stroke-opacity='0.055'/%3E%3Cline x1='120' y1='0' x2='120' y2='120' stroke='%23ffffff' stroke-width='1' stroke-opacity='0.055'/%3E%3Cline x1='0' y1='0' x2='120' y2='0' stroke='%23ffffff' stroke-width='1' stroke-opacity='0.055'/%3E%3Cline x1='0' y1='120' x2='120' y2='120' stroke='%23ffffff' stroke-width='1' stroke-opacity='0.055'/%3E%3Cline x1='60' y1='0' x2='60' y2='120' stroke='%23ffffff' stroke-width='0.8' stroke-opacity='0.025'/%3E%3Cline x1='0' y1='60' x2='120' y2='60' stroke='%23ffffff' stroke-width='0.8' stroke-opacity='0.025'/%3E%3Cline x1='0' y1='0' x2='120' y2='120' stroke='%23ffffff' stroke-width='0.8' stroke-opacity='0.035'/%3E%3Ccircle cx='0' cy='0' r='2.5' fill='%23ffffff' fill-opacity='0.14'/%3E%3Ccircle cx='120' cy='0' r='2.5' fill='%23ffffff' fill-opacity='0.14'/%3E%3Ccircle cx='0' cy='120' r='2.5' fill='%23ffffff' fill-opacity='0.14'/%3E%3Ccircle cx='120' cy='120' r='2.5' fill='%23ffffff' fill-opacity='0.14'/%3E%3Ccircle cx='60' cy='0' r='1.8' fill='%23ffffff' fill-opacity='0.08'/%3E%3Ccircle cx='0' cy='60' r='1.8' fill='%23ffffff' fill-opacity='0.08'/%3E%3Ccircle cx='120' cy='60' r='1.8' fill='%23ffffff' fill-opacity='0.08'/%3E%3Ccircle cx='60' cy='120' r='1.8' fill='%23ffffff' fill-opacity='0.08'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 120px 120px;
   }
 
   /* ── Desktop-Elemente ausblenden ── */

@@ -91,7 +91,7 @@ function renderEvents(events) {
 let spST          = null;   // spotlight ScrollTrigger instance
 let openCardIdx   = -1;     // index of currently open side panel (-1 = closed)
 let currentCount  = 8;      // how many events are currently shown (8 or 16)
-let currentFilter = "all";  // active filter key
+let currentFilter = "Deck1";  // active filter key
 
 // ─── Mobile Event List ───────────────────────────────────────────────────────
 function renderMobileEvents(events) {
@@ -137,7 +137,7 @@ function renderMobileEvents(events) {
 // ─── Spotlight Init (aufrufbar bei Expansion + Filter-Wechsel) ───────────────
 function initSpotlight() {
   if (window.innerWidth <= 1000) {
-    renderMobileEvents(eventData);
+    renderMobileEvents(getNearestN(currentFilter, 8));
     return;
   }
   // Cleanup vorheriger Instanz
@@ -405,7 +405,7 @@ function initSpotlight() {
 window.addEventListener("load", () => {
 
   // ─── Initial render ────────────────────────────────────────────────────
-  renderEvents(getNearestN("all"));
+  renderEvents(getNearestN("Deck1"));
 
   // ─── SplitText ─────────────────────────────────────────────────────────
   const headlineEl = document.querySelector(".headline");
@@ -809,7 +809,7 @@ window.addEventListener("load", () => {
     });
   });
 
-  window._activeLocFilter = "ALL";
+  window._activeLocFilter = "Deck1";
   ScrollTrigger.refresh();
 
   // ─── Location: Tab Switch (Skylounge ↔ Deck1) ─────────────────────────
