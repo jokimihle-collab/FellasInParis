@@ -2,7 +2,7 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>DOCK50 — Eventlocation Flensburg</title>
     <meta name="description" content="DOCK50 ist Flensburgs führende Eventlocation direkt am Hafen. Zwei exklusive Locations: Skylounge & Deck1. Konzerte, Club-Nächte und private Events." />
     <meta property="og:title" content="DOCK50 — Eventlocation Flensburg" />
@@ -221,6 +221,8 @@
     <!-- ─── Events / Spotlight ──────────────────────────────────────────────── -->
     <section class="spotlight snap-section" id="spotlight">
 
+      <div class="spotlight-loc-glow" aria-hidden="true"></div>
+
       <!-- Datum oben links (JS steuert opacity + y) -->
       <div class="project-index"><h2></h2></div>
 
@@ -292,8 +294,8 @@
       <!-- Mobile Event List -->
       <div class="mec-header-box" id="mecHeaderBox">
         <div class="mec-filter-track">
-          <button class="mec-filter-item" data-filter="all">Alle</button>
-          <button class="mec-filter-item active" data-filter="Deck1">Deck1</button>
+          <button class="mec-filter-item active" data-filter="all">Alle</button>
+          <button class="mec-filter-item" data-filter="Deck1">Deck1</button>
           <button class="mec-filter-item" data-filter="Skylounge">Skylounge</button>
         </div>
       </div>
@@ -304,21 +306,6 @@
 
     <!-- ─── Location ─────────────────────────────────────────────────────────── -->
     <section class="location snap-section" id="location">
-
-      <!-- Tab-Leiste oben über der ganzen Section -->
-      <div class="lt-tabs active-deck1" role="tablist">
-        <div class="lt-tabs-inner">
-          <div class="lt-tabs-slider" aria-hidden="true"></div>
-          <button class="lt-tab lt-tab--deck1 is-active" data-to="deck1" role="tab" aria-selected="true">
-            <span class="lt-tab-num">01</span>
-            <span class="lt-tab-name">Deck 1</span>
-          </button>
-          <button class="lt-tab lt-tab--sky" data-to="sky" role="tab" aria-selected="false">
-            <span class="lt-tab-num">02</span>
-            <span class="lt-tab-name">Skylounge</span>
-          </button>
-        </div>
-      </div>
 
       <div class="lt-body">
 
@@ -412,6 +399,21 @@
             </div>
           </div>
 
+        </div>
+      </div>
+
+      <!-- Tab-Leiste am Ende der Section -->
+      <div class="lt-tabs active-deck1" role="tablist">
+        <div class="lt-tabs-inner">
+          <div class="lt-tabs-slider" aria-hidden="true"></div>
+          <button class="lt-tab lt-tab--deck1 is-active" data-to="deck1" role="tab" aria-selected="true">
+            <span class="lt-tab-num">01</span>
+            <span class="lt-tab-name">Deck 1</span>
+          </button>
+          <button class="lt-tab lt-tab--sky" data-to="sky" role="tab" aria-selected="false">
+            <span class="lt-tab-num">02</span>
+            <span class="lt-tab-name">Skylounge</span>
+          </button>
         </div>
       </div>
 
@@ -569,8 +571,8 @@
     <!-- ─── Event Filter Bar ─────────────────────────────────────────────────── -->
     <div id="eventFilter" class="event-filter" aria-hidden="true">
       <div class="ef-track">
-        <button class="ef-item" data-filter="all">Alle</button>
-        <button class="ef-item is-active active" data-filter="Deck1">Deck1</button>
+        <button class="ef-item is-active active" data-filter="all">Alle</button>
+        <button class="ef-item" data-filter="Deck1">Deck1</button>
         <button class="ef-item" data-filter="Skylounge">Skylounge</button>
         <div class="ef-indicator"></div>
       </div>
