@@ -934,7 +934,7 @@ window.addEventListener("load", () => {
   // ─── Spotlight Location-Glow ──────────────────────────────────────────
   const spotlightGlow = document.querySelector(".spotlight-loc-glow");
   const GLOW_COLORS = {
-    all:       "rgba(255,255,255,0.08)",
+    all:       "rgba(230,50,137,0.28)",
     Deck1:     "rgba(87,191,196,0.35)",
     Skylounge: "rgba(212,170,40,0.32)",
   };
