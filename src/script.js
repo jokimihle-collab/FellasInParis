@@ -976,12 +976,15 @@ window.addEventListener("load", () => {
       document.querySelectorAll(".lt-photo-img").forEach((p) => {
         const active = p.classList.contains("lt-photo-img--" + to);
         if (active) {
+          p.style.pointerEvents = "auto";
           gsap.fromTo(p,
             { opacity: 0, scale: 1.05 },
             { opacity: 1, scale: 1, duration: 0.9, ease: "power2.out" }
           );
         } else {
-          gsap.to(p, { opacity: 0, scale: 1.02, duration: 0.45, ease: "power2.in" });
+          gsap.to(p, { opacity: 0, scale: 1.02, duration: 0.45, ease: "power2.in",
+            onComplete() { p.style.pointerEvents = "none"; }
+          });
         }
       });
 

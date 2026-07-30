@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", () => {
     logoImg.src = "/logo-skylounge.png";
     logoImg.alt = "Skylounge";
     logoImg.style.height = "clamp(28px, 4.5vh, 44px)";
-    logoImg.style.filter = "invert(1) sepia(1) saturate(3) hue-rotate(10deg) brightness(0.92)";
+    logoImg.style.filter = "";
   } else if (ev.location === "Deck1") {
     logoImg.src = "/logo-deck1.png";
     logoImg.alt = "Deck1";
